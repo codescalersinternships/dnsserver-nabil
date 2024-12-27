@@ -18,6 +18,7 @@ fn main() -> Result<(), io::Error> {
     let args = Args::parse();
     // Bind an UDP socket on port
     let socket = UdpSocket::bind(("0.0.0.0", args.port))?;
+    println!("Server listening on port {}", args.port);
 
     // For now, queries are handled sequentially, so an infinite loop for servicing
     // requests is initiated.
