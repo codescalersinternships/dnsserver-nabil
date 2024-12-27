@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  dns-server:
+    image: dns-server-image
+    build: .
+    ports:
+      - "2053:2053/udp"
+    restart: always
